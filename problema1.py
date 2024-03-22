@@ -12,17 +12,16 @@
 t1 = list(input().split())
 t2 = list(input().split())
 
-for i in t1:
-    try:
-        t1[t1.index(i)] = int(i)
-    except:
-        pass
+def verificarInt(lista):
+    for i in lista:
+        try:
+            lista[lista.index(i)] = int(i)
+        except:
+            pass
+    return lista
 
-for i in t2:
-    try:
-        t2[t2.index(i)] = int(i)
-    except:
-        pass
+verificarInt(t1)
+verificarInt(t2)
 
 output = tuple(t2+t1+t2)
 
