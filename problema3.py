@@ -19,8 +19,6 @@ for i in t:
     except:
         pass
 
-print(t)
-
 def arbolTrinario(numero):
     return [numero, [], [], []]
 
