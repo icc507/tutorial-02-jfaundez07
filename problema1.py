@@ -9,8 +9,8 @@
 #		  mundo 44
 #La salida debe ser
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
-t1 = list(input("t1: ").split())
-t2 = list(input("t2: ").split())
+t1 = list(input().split())
+t2 = list(input().split())
 
 for i in t1:
     try:

@@ -7,7 +7,7 @@
 #         20 90 hola jiji 77
 #La salida debe ser
 #         (77, 'jiji', 'hola', 90, 20)
-t = list(input("t: ").split())
+t = list(input().split())
 
 for i in t:
     try:
