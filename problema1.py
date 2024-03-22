@@ -24,4 +24,6 @@ for i in t2:
     except:
         pass
 
-print(tuple(t2+t1+t2))
+output = tuple(t2+t1+t2)
+
+print(output)
