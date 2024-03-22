@@ -12,13 +12,16 @@
 t1 = list(input("t1: ").split())
 t2 = list(input("t2: ").split())
 
-for a,b in t1,t2:
+for i in t1:
     try:
-        t1[t1.index(a)] = int(a)
-        t2[t2.index(b)] = int(b)
+        t1[t1.index(i)] = int(i)
     except:
         pass
 
-
+for i in t2:
+    try:
+        t2[t2.index(i)] = int(i)
+    except:
+        pass
 
 print(tuple(t2+t1+t2))
