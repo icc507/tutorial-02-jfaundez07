@@ -19,24 +19,20 @@ for i in t:
     except:
         pass
 
-def arbolTrinario(numero):
-    return [numero, [], [], []]
-
 def insertaEnArbolTrinario(arbol, numero):
     if arbol == []:
-        arbol += arbolTrinario(numero)
+        return [numero, [], [], []]
     elif numero < arbol[0]:
-        insertaEnArbolTrinario(arbol[1], numero)
+        arbol[1] = insertaEnArbolTrinario(arbol[1], numero)
     elif numero == arbol[0]:
-        if not arbol[2]:
-            arbol[2] = [numero, [], [], []]
-        else:
-            insertaEnArbolTrinario(arbol[2], numero)
+        arbol[2] =insertaEnArbolTrinario(arbol[2], numero)
     else:
-        insertaEnArbolTrinario(arbol[3], numero)
+        arbol[3] = insertaEnArbolTrinario(arbol[3], numero)
+    return arbol
 
-w = arbolTrinario(t[0])
-for i in t[1::]:
-    insertaEnArbolTrinario(w, i)
+arbol = []
 
-print(w)
+for i in t:
+    arbol = insertaEnArbolTrinario(arbol, i)
+
+print(arbol)
