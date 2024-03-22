@@ -9,6 +9,16 @@
 #		  mundo 44
 #La salida debe ser
 #         ('mundo', 44, 20, 90, 'hola', 'mundo', 44)
-t = input()
-m = input()
-print(m)
+t1 = list(input("t1: ").split())
+t2 = list(input("t2: ").split())
+
+for a,b in t1,t2:
+    try:
+        t1[t1.index(a)] = int(a)
+        t2[t2.index(b)] = int(b)
+    except:
+        pass
+
+
+
+print(tuple(t2+t1+t2))
